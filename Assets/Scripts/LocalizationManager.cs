@@ -3,14 +3,6 @@ using UnityEngine.Localization.Settings;
 
 public class LocalizationManager : MonoBehaviour
 {
-	private void Awake()
-	{
-		if (Application.systemLanguage == SystemLanguage.Russian)
-		{
-			ChangeLanguage(2); // Переключение на русский язык
-		}
-	}
-
 	private void Start()
 	{
 		Invoke("Delay", 0.1f);

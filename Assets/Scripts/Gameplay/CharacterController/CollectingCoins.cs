@@ -6,11 +6,12 @@ public class CollectingCoins : MonoBehaviour
 	public Text scoreText;
 	private byte _collectedCoins;
 
+
 	private void OnTriggerEnter(Collider other)
 	{
-		bool isCollidingWithCoin = other.CompareTag("Coins");
+		bool isCharacterCollidingWithCoin = other.CompareTag("Coins");
 
-		if (isCollidingWithCoin)
+		if (isCharacterCollidingWithCoin)
 		{
 			Destroy(other.gameObject);
 			_collectedCoins++;
